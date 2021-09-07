@@ -7,8 +7,8 @@ let from whom =
 
 [<EntryPoint>]
 let main argv =
-    let message = from "F# LogicCircits1" 
-    printfn "Logic Circut Simulator %s\n" message
+    let message = from "F# LogicCircuits1" 
+    printfn "Logic Circuit Simulator %s\n" message
     
     let NOT a = not a
     let AND a b = a && b
