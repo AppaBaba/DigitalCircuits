@@ -7,8 +7,8 @@ let from whom =
 
 [<EntryPoint>]
 let main argv =
-    let message = from "F#" // Call the function
-    printfn "Hello world %s" message
+    let message = from "F# HexAddSub" 
+    printfn "Hex Add Sub Simulator %s" message
     let NOT a = not a
     let AND a b = a && b
     let OR a b = a || b
@@ -52,19 +52,19 @@ let main argv =
         let (Sreg3, Cout3) = FA areg.[3] breg3 Cin3
         let Cin2 = Cout3
         let breg2 = XOR k breg.[2]
-        let (Sreg2, Cout2) = FA areg.[2] breg.[2] Cin2
+        let (Sreg2, Cout2) = FA areg.[2] breg2 Cin2
         let Cin1 = Cout2
         let breg1 = XOR k breg.[1]
-        let (Sreg1, Cout1) = FA areg.[1] breg.[1] Cin1
+        let (Sreg1, Cout1) = FA areg.[1] breg1 Cin1
         let Cin0 = Cout1
         let breg0 = XOR k breg.[0]
-        let (Sreg0, Cout0) = FA areg.[0] breg.[0] Cin0
+        let (Sreg0, Cout0) = FA areg.[0] breg0 Cin0
 
         let Sreg : bool array = [| Sreg0; Sreg1; Sreg2; Sreg3 |]
         (Sreg, Cout0)
     
     let Areg : bool array = [| true; true; true; false |]
-    let Breg : bool array = [| false; true; false; true |]
+    let Breg : bool array = [| false; true; true; false |]
     let ki : bool = true
     let (Sreg, Cout0) = HexAddSub (Areg, Breg, ki)
 
