@@ -1,4 +1,4 @@
-// LogicGate.cpp
+// LogicGates01.cpp
 
 #include <iostream>
 
