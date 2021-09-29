@@ -16,10 +16,10 @@ public:
     bool input(bool a)
     {
         nota = !a;
-        return output();
+        return Logic();
     }
 
-    bool output()
+    bool Logic ()
     {
         return nota;
     }
@@ -41,10 +41,10 @@ public:
     {
         anda = a;
         andb = b;
-        return output();
+        return Logic();
     }
 
-    bool output()
+    bool Logic()
     {
         return anda && andb;
     }
@@ -65,10 +65,10 @@ public:
     {
         ora = a;
         orb = b;
-        return output();
+        return Logic();
     }
 
-    bool output()
+    bool Logic()
     {
         return ora || orb;
     }
@@ -90,10 +90,10 @@ public:
     {
         xora = a;
         xorb = b;
-        return output();
+        return Logic();
     }
 
-    bool output()
+    bool Logic()
     {
         return (!xora && xorb) || (xora && !xorb);
     }
