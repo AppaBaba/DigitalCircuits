@@ -1,9 +1,8 @@
+// Testbench for Gate Level Half Adder
 module halfAdderGLTB;
 
 reg A;
 reg B;
-
-// Outputs
 wire S;
 wire C;
 

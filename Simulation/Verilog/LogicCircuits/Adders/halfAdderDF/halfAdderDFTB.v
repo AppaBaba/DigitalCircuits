@@ -1,9 +1,8 @@
+// Testbench for Data Flow Half Adder
 module halfAdderDFTB;
 
 reg A;
 reg B;
-
-// Outputs
 wire S;
 wire C;
 
