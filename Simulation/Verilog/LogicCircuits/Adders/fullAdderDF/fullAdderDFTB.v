@@ -4,12 +4,10 @@ module fullAdderDFTB;
 reg A;
 reg B;
 reg Cin;
-
-// Outputs
 wire Sum;
 wire Carry;
 
-fullAdderDF uut (.a(A),.b(B),.cin(Cin),.sum(Sum),.carry(Carry));
+fullAdderDF fADF (.a(A),.b(B),.cin(Cin),.sum(Sum),.carry(Carry));
 
 initial begin
  A = 0; B = 0;

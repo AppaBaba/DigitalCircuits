@@ -7,7 +7,7 @@ reg Cin;
 wire Sum;
 wire Carry;
 
-fullAdderGL uut (.a(A),.b(B),.cin(Cin),.sum(Sum),.carry(Carry));
+fullAdderGL fAGL (.a(A),.b(B),.cin(Cin),.sum(Sum),.carry(Carry));
 
 initial begin
  A = 0; B = 0;

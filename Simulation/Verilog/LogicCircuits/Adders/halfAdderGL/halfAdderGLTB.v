@@ -6,7 +6,7 @@ reg B;
 wire S;
 wire C;
 
-halfAdderGL uut (.a(A),.b(B),.s(S),.c(C));
+halfAdderGL hAGL (.a(A),.b(B),.s(S),.c(C));
 
 initial begin
  A = 0; B = 0;
