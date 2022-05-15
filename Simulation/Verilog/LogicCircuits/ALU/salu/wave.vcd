@@ -1,0 +1,82 @@
+$date
+	Sat May 14 23:37:59 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module salu_tb $end
+$var wire 8 ! Result [7:0] $end
+$var reg 3 " Mux [2:0] $end
+$var reg 8 # opA [7:0] $end
+$var reg 8 $ opB [7:0] $end
+$scope module SALU $end
+$var wire 3 % mux [2:0] $end
+$var wire 8 & op1 [7:0] $end
+$var wire 8 ' op2 [7:0] $end
+$var wire 8 ( operanda [7:0] $end
+$var wire 8 ) operandb [7:0] $end
+$var wire 8 * result [7:0] $end
+$var reg 8 + r [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10100101 +
+b10100101 *
+b111011 )
+b1101010 (
+b111011 '
+b1101010 &
+b0 %
+b111011 $
+b1101010 #
+b0 "
+b10100101 !
+$end
+#10
+b101111 !
+b101111 *
+b101111 +
+b1 "
+b1 %
+#20
+b10010101 !
+b10010101 *
+b10010101 +
+b10 "
+b10 %
+#30
+b101010 !
+b101010 *
+b101010 +
+b11 "
+b11 %
+#40
+b1111011 !
+b1111011 *
+b1111011 +
+b100 "
+b100 %
+#50
+b11010101 !
+b11010101 *
+b11010101 +
+b101 "
+b101 %
+#60
+b10000100 !
+b10000100 *
+b10000100 +
+b110 "
+b110 %
+#70
+b1010001 !
+b1010001 *
+b1010001 +
+b111 "
+b111 %
+#80
