@@ -8,7 +8,20 @@ module salu(operanda,operandb,mux,result);
     output [7:0] result;
     wire [7:0] op1,op2;
     reg [7:0] r;
-    
+
+    parameter [3:0] Add = 4'h0,
+                    Sub = 4'h1,
+                    Mul = 4'h2,
+                    Div = 4'h3,
+                    Not = 4'h4,
+                    And = 4'h5,
+                    Or  = 4'h6,
+                    Nand= 4'h7,
+                    Nor = 4'h8,
+                    Xor = 4'h9,
+                    Shtl= 4'ha,
+                    Shtr= 4'hb;
+
     //variables for operations
     assign op1 = operanda;
     assign op2 = operandb;
@@ -18,18 +31,18 @@ module salu(operanda,operandb,mux,result);
     always @(mux or op1 or op2)
     begin
         case (mux)
-         'h0 : r = op1 + op2;    //Add
-         'h1 : r = op1 - op2;    //Sub
-         'h2 : r = op1 * op2;    //Mul
-         'h3 : r = op1 / op2;    //Div
-         'h4 : r = ~op1;         //NOT
-         'h5 : r = op1 & op2;    //AND
-         'h6 : r = op1 | op2;    //OR
-         'h7 : r = ~(op1 & op2); //NAND 
-         'h8 : r = ~(op1 | op2); //NOR                
-         'h9 : r = op1 ^ op2;    //XOR
-         'hA : r = op1 << 1;     //Logical shift left
-         'hB : r = op1 >> 1;     //Logical shift right
+         Add : r = op1 + op2;    //Add
+         Sub : r = op1 - op2;    //Sub
+         Mul : r = op1 * op2;    //Mul
+         Div : r = op1 / op2;    //Div
+         Not : r = ~op1;         //NOT
+         And : r = op1 & op2;    //AND
+         Or  : r = op1 | op2;    //OR
+         Nand: r = ~(op1 & op2); //NAND 
+         Nor : r = ~(op1 | op2); //NOR                
+         Xor : r = op1 ^ op2;    //XOR
+         Shtl: r = op1 << 1;     //Logical shift left
+         Shtr: r = op1 >> 1;     //Logical shift right
         endcase 
     end
     
