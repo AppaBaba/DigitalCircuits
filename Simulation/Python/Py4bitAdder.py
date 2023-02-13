@@ -12,13 +12,14 @@ def HA(A, B):
 
 def FA(A, B, cin):
     (s1, c1) = HA(A, B)
-    (sum, c2) = HA(s1, cin)
+    (s2, c2) = HA(s1, cin)
     cout = OR(c1, c2)
-    return s1, cout
+    return (s2, cout)
+
 import array as reg
 
 Areg = reg.array('b', [1,0,1,0])
-Breg = reg.array('b', [0,1,1,0])
+Breg = reg.array('b', [0,0,1,1])
 Sreg = reg.array('b', [0,0,0,0])
 
 
