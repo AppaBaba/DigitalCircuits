@@ -14,9 +14,9 @@ def HA(A, B):
 
 def FA(A, B, cin):
     (s1, c1) = HA(A, B)
-    (sum, c2) = HA(s1, cin)
+    (s2, c2) = HA(s1, cin)
     cout = OR(c1, c2)
-    return s1, cout
+    return (s2, cout)
 
 def HexAdder():
     (Sreg[3], Cout[3]) = FA(Areg[3], Breg[3], Cin[3])
