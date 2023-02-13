@@ -19,26 +19,22 @@ def FA(A, B, cin):
     return (s2, cout)
 
 def HexAdder():
-    (Sreg[3], Cout[3]) = FA(Areg[3], Breg[3], Cin[3])
-    Cin[2] = Cout[3]
-    (Sreg[2], Cout[2]) = FA(Areg[2], Breg[2], Cin[2])
-    Cin[1] = Cout[2]
-    (Sreg[1], Cout[1]) = FA(Areg[1], Breg[1], Cin[1])
-    Cin[0] = Cout[1]
-    (Sreg[0], Cout[0]) = FA(Areg[0], Breg[0], Cin[0])
-    Carry = (Cout[0])
+    (Sreg[3], Cout3) = FA(Areg[3], Breg[3], Cin)
+    Cin2 = Cout3
+    (Sreg[2], Cout2) = FA(Areg[2], Breg[2], Cin2)
+    Cin1 = Cout2
+    (Sreg[1], Cout1) = FA(Areg[1], Breg[1], Cin1)
+    Cin0 = Cout1
+    (Sreg[0], Cout) = FA(Areg[0], Breg[0], Cin0)
+    return Cout
     
 Areg = reg.array('b', [1,0,1,0])
-Breg = reg.array('b', [0,1,1,0])
+Breg = reg.array('b', [0,0,1,1])
 Sreg = reg.array('b', [0,0,0,0])
+Cin = 0
 
-Cin =  reg.array('b', [0,0,0,0])
-Cout = reg.array('b', [0,0,0,0])
-
-HexAdder()
-print(Cout[3])
-print("Cout =", *Cout)
+C = HexAdder()
 print("A Reg = ", *Areg)
 print("B Reg = ", *Breg)
 print("Sum =   ", *Sreg)
-print("Carry Out = ", Cout[0])
+print("Carry Out = ", C)
