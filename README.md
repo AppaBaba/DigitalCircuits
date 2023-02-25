@@ -7,3 +7,4 @@ I would never build such a circuit with today’s technology. Just need to use o
 
 Ok then I will show some logic circuits that was tested on a simulator and then I will write some simple code two show how to simulate such circuits. Some code will be on a PC and some on Arduino.
 
+Note:  Simulating ALU and above logic circuits gits a little redundant at this point with conventional programming languages. At this point I like to emulate things like ALUs and CPUs. Even better move to a hardware definition language (HDL) such as Verilog. The HDL can then simulate the logic or be synthesized on a FPGA to implement the logic.
